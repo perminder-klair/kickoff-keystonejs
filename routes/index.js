@@ -7,11 +7,11 @@ keystone.pre('routes', middleware.initLocals);
 
 // Import Route Controllers
 var routes = {
-    views: importRoutes('./views'),
+	views: importRoutes('./views'),
 };
 
 // Setup Route Bindings
-exports = module.exports = function (app) {
+exports = module.exports = function(app) {
 	// Views
-    app.get('/', routes.views.index);
+	app.get('/', routes.views.index);
 };

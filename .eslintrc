@@ -1,14 +1,21 @@
 {
-    "extends": "keystone",
+    "extends": [
+        "prettier",
+        "keystone"
+    ],
+    "plugins": [
+        "prettier"
+    ],
     "rules": {
-        "strict": 0,
-        "indent": [2, 4],
-        "comma-dangle": 0,
-        "new-cap": 0,
-        "camelcase": 0,
-        "class-methods-use-this": 0,
-        "max-len": ['error', 280, 4],
-        "no-param-reassign": ['error', { 'props': false }],
-        "no-underscore-dangle": 0
+        "prettier/prettier": ["error", {
+            "singleQuote": true,
+            "trailingComma": "all",
+            "bracketSpacing": true,
+            "jsxBracketSameLine": true,
+            "parser": "flow",
+            "useTabs": true,
+            "tabWidth": 4
+        }],
+        "space-before-function-paren": 0
     }
 }
