@@ -4,7 +4,8 @@
         "keystone"
     ],
     "plugins": [
-        "prettier"
+        "prettier",
+        "import"
     ],
     "rules": {
         "prettier/prettier": ["error", {
@@ -16,6 +17,10 @@
             "useTabs": true,
             "tabWidth": 4
         }],
+        "indent": 0,
+        "no-tabs": 0,
+        "no-underscore-dangle": 0,
+        "quote-props": 0,
         "space-before-function-paren": 0
     }
 }
