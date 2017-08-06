@@ -13,9 +13,7 @@
             "trailingComma": "all",
             "bracketSpacing": true,
             "jsxBracketSameLine": true,
-            "parser": "flow",
-            "useTabs": true,
-            "tabWidth": 4
+            "parser": "flow"
         }],
         "indent": 0,
         "no-tabs": 0,
