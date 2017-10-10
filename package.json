@@ -2,22 +2,22 @@
     "name": "kickoff-keystonejs",
     "version": "1.0.0",
     "private": true,
+    "scripts": {
+        "start": "node web.js",
+        "lint": "eslint --fix --ext .jsx,.js models/ routes/ updates/"
+    },
     "dependencies": {
-        "async": "2.4.1",
-        "keystone": "git://github.com/keystonejs/keystone#8d0e8053603a9191f4cd5e9452418bb7b25ec47c",
+        "async": "2.5.0",
+        "keystone": "git://github.com/keystonejs/keystone#15cb2998ab52d9b43d7a99902b4a35cd06ad21c1",
         "keystone-email": "1.0.5",
         "lodash": "^4.17.4"
     },
     "devDependencies": {
-        "eslint": "3.15.0",
+        "eslint": "4.8.0",
         "eslint-config-keystone": "3.0.0",
-        "eslint-config-prettier": "^2.3.0",
-        "eslint-plugin-import": "^2.2.0",
-        "eslint-plugin-prettier": "^2.1.2",
-        "prettier": "^1.5.3"
-    },
-    "scripts": {
-        "lint": "eslint --fix --ext .jsx,.js models/ routes/ updates/",
-        "start": "node web.js"
+        "eslint-config-prettier": "^2.6.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-prettier": "^2.3.1",
+        "prettier": "^1.7.4"
     }
 }

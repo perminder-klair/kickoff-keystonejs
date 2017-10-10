@@ -38,51 +38,6 @@ Enquiry.schema.post('save', function() {
   }
 });
 
-Enquiry.schema.methods.sendNotificationEmail = function(callback) {
-  if (typeof callback !== 'function') {
-    callback = function(err) {
-      if (err) {
-        console.error(
-          'There was an error sending the notification email:',
-          err,
-        );
-      }
-    };
-  }
-
-  if (!process.env.MAILGUN_API_KEY || !process.env.MAILGUN_DOMAIN) {
-    console.log('Unable to send email - no mailgun credentials provided');
-    return callback(new Error('could not find mailgun credentials'));
-  }
-
-  var enquiry = this;
-  var brand = keystone.get('brand');
-
-  keystone
-    .list('User')
-    .model.find()
-    .where('isAdmin', true)
-    .exec(function(err, admins) {
-      if (err) return callback(err);
-      new keystone.Email({
-        templateName: 'enquiry-notification',
-        transport: 'mailgun',
-      }).send(
-        {
-          to: admins,
-          from: {
-            name: 'Masih Directory',
-            email: 'contact@masih-directory.com',
-          },
-          subject: 'New Enquiry for Masih Directory',
-          enquiry: enquiry,
-          brand: brand,
-        },
-        callback,
-      );
-    });
-};
-
 Enquiry.defaultSort = '-createdAt';
 Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';
 Enquiry.register();
