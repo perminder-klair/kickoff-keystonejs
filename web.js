@@ -1,6 +1,4 @@
-require('babel-core/register');
-
-var keystone = require('keystone');
+import keystone from 'keystone';
 
 keystone.init({
   name: 'kickoff-keystonejs',

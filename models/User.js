@@ -1,4 +1,5 @@
-var keystone = require('keystone');
+import keystone from 'keystone';
+
 var Types = keystone.Field.Types;
 
 /**
