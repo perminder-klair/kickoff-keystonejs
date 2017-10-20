@@ -2,6 +2,8 @@
 
 > A minimalistic admin panel using KeystoneJs.
 
+Includes Apollo GraphQL integration.
+
 #### Requirements
 ```bash
 - Node >=v7.7.2
