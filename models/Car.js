@@ -1,6 +1,6 @@
 import keystone from 'keystone';
 
-const s3Storage = require('../config/s3');
+// const s3Storage = require('../config/s3');
 
 var Types = keystone.Field.Types;
 
@@ -24,7 +24,7 @@ Car.add({
     ],
   },
   price: { type: Types.Number, initial: true, required: true },
-  image: { type: Types.File, storage: s3Storage },
+  // image: { type: Types.File, storage: s3Storage },
 });
 
 /**
