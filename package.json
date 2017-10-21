@@ -14,6 +14,7 @@
         "graphql-tools": "^2.4.0",
         "keystone": "git://github.com/keystonejs/keystone#15cb2998ab52d9b43d7a99902b4a35cd06ad21c1",
         "keystone-email": "1.0.5",
+        "keystone-storage-adapter-s3": "^1.1.1",
         "lodash": "^4.17.4",
         "merge-graphql-schemas": "^1.2.0"
     },
