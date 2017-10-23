@@ -20,3 +20,4 @@ yarn install
 ### Scripts
 
 - `npm start` - simply starts the server
+- `yarn run dev` - starts in development mode

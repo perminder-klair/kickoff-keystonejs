@@ -17,6 +17,23 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
+  app.use(function(req, res, next) {
+    // allow cross origin requests
+    res.setHeader(
+      'Access-Control-Allow-Methods',
+      'POST, PUT, OPTIONS, DELETE, GET',
+    );
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept',
+    );
+    next();
+  });
+  app.options('/*', (req, res) => {
+    res.json({ success: true });
+  });
+
   // Views
   app.get('/', routes.views.index);
   app.post(

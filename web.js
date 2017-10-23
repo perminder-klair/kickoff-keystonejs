@@ -13,6 +13,7 @@ keystone.init({
 
 require('./models');
 
+keystone.set('cors allow origin', false);
 keystone.set('routes', require('./routes'));
 
 keystone.start();
