@@ -1,8 +1,8 @@
 # https://jeroenpelgrims.com/pushing-to-dokku-from-gitlab-ci
 
 variables:
-  DOKKU_HOST: '198.199.125.233'
-  PROJECT_NAME: 'luxurylimoland-admin'
+  DOKKU_HOST: 'SERVER-IP-HERE'
+  PROJECT_NAME: 'PROJECT-NAME-HERE'
 
 image: node:7.7.2
 
