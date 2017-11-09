@@ -18,7 +18,7 @@
         "dotenv": "^4.0.0",
         "graphql": "^0.11.7",
         "graphql-tools": "^2.4.0",
-        "keystone": "git://github.com/keystonejs/keystone#15cb2998ab52d9b43d7a99902b4a35cd06ad21c1",
+        "keystone": "git://github.com/keystonejs/keystone#0ca9eb18c00fb051c579105ae7d283f98b182d8d",
         "keystone-email": "1.0.5",
         "keystone-storage-adapter-s3": "^1.1.1",
         "lodash": "^4.17.4",
