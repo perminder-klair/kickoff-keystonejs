@@ -10,11 +10,14 @@ var Types = keystone.Field.Types;
  */
 var Car = new keystone.List('Car', {
   autokey: { path: 'slug', from: 'title', unique: true },
+  map: { name: 'title' },
+  defaultSort: '-createdAt',
+  track: true,
 });
 
 Car.add({
-  name: { type: String, required: true, index: true },
-  slug: { type: String },
+  name: { type: String, required: true },
+  slug: { type: String, readonly: true, hidden: true, index: true },
   description: { type: Types.Markdown },
   status: {
     type: Types.Select,
@@ -30,5 +33,5 @@ Car.add({
 /**
  * Registration
  */
-Car.defaultColumns = 'name, price';
+Car.defaultColumns = 'name, price, createdAt|15%';
 Car.register();
