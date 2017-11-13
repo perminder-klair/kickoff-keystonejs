@@ -4,7 +4,7 @@ const User = keystone.list('User');
 
 export default {
   Query: {
-    allUsers: async () =>
+    users: async () =>
       User.model
         .find()
         .sort('-createdAt')
