@@ -1,14 +1,15 @@
 import keystone from 'keystone';
+import conf from './config';
 
 keystone.init({
-  name: 'kickoff-keystonejs',
+  name: conf.get('project.name'),
   'auto update': true,
-  mongo: 'SET-MONGODB-URL-HERE',
-  'cloudinary config': 'SET-CLOUDINARY-URL-HERE',
+  mongo: conf.get('mongodb'),
+  // 'cloudinary config': 'SET-CLOUDINARY-URL-HERE',
   session: true,
   auth: true,
   'user model': 'User',
-  'cookie secret': 'SET-COOKIE-SECRET-here',
+  'cookie secret': conf.get('cookieSecret'),
 });
 
 require('./models');

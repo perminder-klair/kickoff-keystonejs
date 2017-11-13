@@ -1,6 +1,6 @@
 import keystone from 'keystone';
 
-// const s3Storage = require('../config/s3');
+// const s3Storage = require('../utils/s3');
 
 var Types = keystone.Field.Types;
 
@@ -16,7 +16,7 @@ var Car = new keystone.List('Car', {
 });
 
 Car.add({
-  name: { type: String, required: true },
+  name: { type: String, required: true, default: 'My car' },
   slug: { type: String, readonly: true, hidden: true, index: true },
   description: { type: Types.Markdown },
   status: {
