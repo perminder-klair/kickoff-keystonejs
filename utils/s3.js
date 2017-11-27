@@ -1,5 +1,5 @@
 import keystone from 'keystone';
-import conf from './config';
+import conf from '../config';
 require('dotenv').load();
 
 module.exports = new keystone.Storage({
