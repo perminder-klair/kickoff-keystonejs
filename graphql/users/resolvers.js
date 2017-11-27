@@ -12,12 +12,8 @@ export default {
   },
   Mutation: {
     addUser: async (root, args) => {
-      const newData = new User({
-        fullName: args.input.fullName,
-        postcode: args.input.postcode,
-      });
-
-      newData.save();
+      const newData = new User.model(args.input);
+      await newData.save();
       return newData;
     },
   },
