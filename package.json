@@ -5,25 +5,20 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "lint": "eslint --fix --ext .jsx,.js models/ routes/ updates/ graphql/ config/ utils/"
+    "lint": "eslint --fix --ext .jsx,.js models/ routes/ config/ utils/"
   },
   "dependencies": {
-    "apollo-server-express": "^1.3.2",
     "async": "2.6.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "body-parser": "^1.18.2",
     "convict": "^4.0.2",
     "dotenv": "^4.0.0",
-    "graphql": "^0.11.7",
-    "graphql-tools": "^2.4.0",
-    "keystone": "git://github.com/keystonejs/keystone#0ca9eb18c00fb051c579105ae7d283f98b182d8d",
+    "keystone": "git://github.com/keystonejs/keystone#a1333e38b45a092e2c3413f96bb5e297c8d1a957",
     "keystone-email": "^1.0.5",
     "keystone-storage-adapter-s3": "^1.1.1",
-    "lodash": "^4.17.4",
-    "merge-graphql-schemas": "^1.2.0"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -36,6 +31,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.4.0",
+    "nodemon": "^1.17.1",
     "prettier": "^1.9.2"
   }
 }

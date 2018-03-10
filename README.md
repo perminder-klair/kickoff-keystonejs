@@ -2,8 +2,6 @@
 
 > A minimalistic admin panel using KeystoneJs.
 
-Includes Apollo GraphQL integration.
-
 #### Requirements
 ```bash
 - Node >=v7.7.2
@@ -26,13 +24,11 @@ yarn install
 ### Usage
 
 - Configuration file: `/config/index.js`
-- GraphQL URL (POST) `localhost:3000/graphql`
-- GraphiQL URL `localhost:3000/graphiql`
 - Keystone Admin Panel `localhost:3000/keystone`
 
+##### Default logins to Keystone:
 
-Default logins to Keystone:
-
-Username: `admin@admin.com` 
-
+```
+Username: `admin@admin.com`
 Password: `admin12`
+```
