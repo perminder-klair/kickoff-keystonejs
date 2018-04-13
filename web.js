@@ -10,6 +10,8 @@ keystone.init({
   auth: true,
   'user model': 'User',
   'cookie secret': conf.get('cookieSecret'),
+  port: conf.get('port'),
+  env: conf.get('env'),
 });
 
 require('./models');
